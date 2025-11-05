@@ -1,0 +1,17 @@
+namespace SpriteKind {
+    export const Player2 = SpriteKind.create()
+    export const Player3 = SpriteKind.create()
+    export const Player4 = SpriteKind.create()
+}
+let Mario = sprites.create(assets.image`smol mario`, SpriteKind.Player)
+controller.moveSprite(Mario)
+splitScreen.cameraFollowSprite(splitScreen.Camera.Camera1, Mario)
+let Luigi = sprites.create(assets.image`myImage0`, SpriteKind.Player4)
+splitScreen.cameraFollowSprite(splitScreen.Camera.Camera2, Luigi)
+controller.player4.moveSprite(Luigi)
+let Yellow_Toad = sprites.create(assets.image`myImage2`, SpriteKind.Player3)
+controller.player3.moveSprite(Yellow_Toad)
+splitScreen.cameraFollowSprite(splitScreen.Camera.Camera3, Yellow_Toad)
+let Blue_Toad = sprites.create(assets.image`myImage4`, SpriteKind.Player2)
+controller.player2.moveSprite(Blue_Toad)
+splitScreen.cameraFollowSprite(splitScreen.Camera.Camera4, Blue_Toad)
